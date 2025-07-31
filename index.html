@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHOF Photostrip</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">AHOF</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="camera-section">
+                <div class="camera-container">
+                    <video id="video" autoplay playsinline></video>
+                    <canvas id="canvas" style="display: none;"></canvas>
+                    
+                    <div class="camera-overlay" id="cameraOverlay">
+                        <div class="warning-icon">⚠</div>
+                        <p class="camera-message" id="cameraMessage">Please allow camera access in your browser settings</p>
+                        <div class="refresh-icon" id="refreshIcon">🔄</div>
+                    </div>
+                    
+                    <div class="countdown" id="countdown" style="display: none;">3</div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="startBtn">Start Photobooth</button>
+                    <button class="btn btn-secondary" id="resetBtn">Reset</button>
+                </div>
+
+                <div class="camera-controls" id="cameraControls" style="display: none;">
+                    <button class="btn btn-secondary" id="switchCameraBtn">Switch Camera</button>
+                    <button class="btn btn-primary" id="continueBtn">Continue</button>
+                </div>
+
+                <p class="camera-status" id="cameraStatus">Front camera not available, trying back camera...</p>
+            </div>
+
+            <div class="photostrip-section">
+                <div class="photostrip">
+                    <div class="photostrip-header">
+                        <img src="./logo.png" alt="AHOF Logo" class="logo" id="logoImage" onerror="this.style.display='none'">
+                        <img src="./group.png" alt="AHOF Group" class="group-image" id="groupImage" onerror="this.style.display='none'">
+                    </div>
+
+                    <div class="photo-slots">
+                        <div class="photo-slot" id="photo1">
+                            <div class="photo-placeholder">
+                                <div class="camera-icon">📷</div>
+                                <span>Photo 1</span>
+                            </div>
+                        </div>
+                        <div class="photo-slot" id="photo2">
+                            <div class="photo-placeholder">
+                                <div class="camera-icon">📷</div>
+                                <span>Photo 2</span>
+                            </div>
+                        </div>
+                        <div class="photo-slot" id="photo3">
+                            <div class="photo-placeholder">
+                                <div class="camera-icon">📷</div>
+                                <span>Photo 3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photostrip-footer">
+                        <h3>MEMORIES FROM THE CONCERT</h3>
+                        <p>© AHOF 1ST PHILIPPINE FANCON</p>
+                        <a href="#" class="social-link">iveen_space</a>
+                    </div>
+                </div>
+
+                <button class="btn btn-download" id="downloadBtn">Download Photostrip</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
