@@ -136,7 +136,7 @@
         
         .photostrip-footer p:nth-child(3) {
             color: #f7dc6f;
-            font-weight: 400;
+            font-weight: ;
         }
         
         .btn {
@@ -233,11 +233,11 @@
                     <video id="video" class="w-full h-full object-cover" autoplay playsinline></video>
                     <div id="cameraError" class="error-message absolute inset-0 flex items-center justify-center hidden">
                         <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-3 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-3 text-red-" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                             </svg>
                             <p class="text-lg font-medium">Camera access required</p>
-                            <p class="text-sm text-gray-400 mt-2">Please allow camera access in your browser settings</p>
+                            <p class="text-sm text-gray- mt-2">Please allow camera access in your browser settings</p>
                         </div>
                     </div>
                     <div class="camera-controls">
@@ -585,7 +585,7 @@
                     statusMessage.textContent = "Generating photostrip...";
                     
                     const stripWidth = 450;
-                    const stripHeight = 1200;
+                    const stripHeight = 1300;
                     
                     photoStripCanvas.width = stripWidth;
                     photoStripCanvas.height = stripHeight;
@@ -602,7 +602,7 @@
                     // Add THE NEXT PRINCE logo at the top
                     const logoElement = document.querySelector('.photostrip-logo img');
                     if (logoElement && logoElement.complete && logoElement.naturalHeight !== 0) {
-                        const logoWidth = 400;
+                        const logoWidth = 300;
                         const logoHeight = (logoElement.naturalHeight / logoElement.naturalWidth) * logoWidth;
                         const logoX = (stripWidth - logoWidth) / 2;
                         const logoY = 20;
@@ -611,7 +611,7 @@
                     }
                     
                     // Add the THE NEXT PRINCE group photo area
-                    const membersAreaY = 130;
+                    const membersAreaY = 150;
                     const membersAreaHeight = 200;
                     
                     const drawMembersArea = () => {
