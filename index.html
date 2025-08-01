@@ -15,7 +15,7 @@
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #ffffff;
-            color: #1a1a1a;
+            color: #000000;
             min-height: 100vh;
         }
         
@@ -595,7 +595,7 @@
                     const ctx = photoStripCanvas.getContext('2d');
                     
                     // Create black background like the reference image
-                    ctx.fillStyle = '#ffffff';
+                    ctx.fillStyle = '#000';
                     ctx.fillRect(0, 0, stripWidth, stripHeight);
                     
                     // Header section - add logo first
@@ -741,7 +741,7 @@
                     
                     // Create download
                     const link = document.createElement('a');
-                    link.download = 'THE NEXT PRINCE_photostrip.jpg';
+                    link.download = 'THE NEXTPRINCE_photostrip.jpg';
                     link.href = photoStripCanvas.toDataURL('image/jpeg', 0.9);
                     link.click();
                     
