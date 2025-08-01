@@ -127,6 +127,8 @@
             border: 2px solid #d4af37;
             position: relative;
             overflow: hidden;
+            width: 450px;
+            margin: 0 auto;
         }
         
         .photostrip-footer {
@@ -288,7 +290,7 @@
                     </div>
                     
                     <!-- THENEXTPRINCE Photo -->
-                    <div class="THE NEXT PRINCE-group-photo mb-12" style="width: 425px; height: 200px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <div class="THE NEXT PRINCE-group-photo mb-12" style="width: 390px; height: 200px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
                         <img id="THENEXTPRINCEGroupPhoto" src="./group.png" alt="THENEXTPRINCEGroup" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                     </div>
 
@@ -612,7 +614,7 @@
                     }
                     
                     // Add the THE NEXT PRINCE group photo area
-                    const membersAreaY = 150;
+                    const membersAreaY = 125;
                     const membersAreaHeight = 200;
                     
                     const drawMembersArea = () => {
@@ -719,18 +721,18 @@
                     
                     await processPhotos();
                     
-                    // Footer section - matching the exact layout
+                    // Footer section - matching the exact layout with gold colors
                     const footerStartY = stripHeight - 70;
                     
-                    ctx.fillStyle = '#2c2c2c';
+                    ctx.fillStyle = '#d4af37';
                     ctx.font = 'bold 16px "Montserrat", sans-serif';
                     ctx.fillText('MEMORIES FROM THE EVENT', stripWidth / 2, footerStartY + 10);
                     
-                    ctx.fillStyle = '#4c4c4c';
+                    ctx.fillStyle = '#f4d03f';
                     ctx.font = 'bold 13px "Montserrat", sans-serif';
                     ctx.fillText('THE NEXT PRINCE', stripWidth / 2, footerStartY + 30);
                     
-                    ctx.fillStyle = '#6c6c6c';
+                    ctx.fillStyle = '#f7dc6f';
                     ctx.font = 'bold 12px "Montserrat", sans-serif';
                     ctx.fillText('iveen_space', stripWidth / 2, footerStartY + 50);
                     
