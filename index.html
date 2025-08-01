@@ -225,7 +225,7 @@
 <body class="p-4">
     <div class="max-w-4xl mx-auto">
         <header class="text-center mb-8">
-            <h1 class="text-6xl font-bold text-blue-900">THE NEXT PRINCE</h1>
+            <h1 class="text-6xl font-bold text-gold-900">THE NEXT PRINCE</h1>
         </header>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -298,7 +298,7 @@
                     </div>
 
                     <div class="photostrip-footer">
-                        <p class="text-[18px] text-gray-400">MEMORIES FROM THE CONCERT</p>
+                        <p class="text-[18px] text-gray-400">MEMORIES FROM THE EVENT</p>
                         <p class="text-[10px] text-gray-450 mt-1">© THE NEXT PRINCE </p>
                         <p class="text-[8px] text-gray-450">iveen_space</p>
                     </div>
@@ -594,11 +594,11 @@
                     
                     const ctx = photoStripCanvas.getContext('2d');
                     
-                    // Create blue background like the reference image
+                    // Create black background like the reference image
                     ctx.fillStyle = '#87CEEB';
                     ctx.fillRect(0, 0, stripWidth, stripHeight);
                     
-                    // Header section - add THE NEXT PRINCE logo first
+                    // Header section - add logo first
                     ctx.textAlign = 'center';
                     
                     // Add THE NEXT PRINCE logo at the top
@@ -617,8 +617,8 @@
                     const membersAreaHeight = 200;
                     
                     // Try to load and draw the THE NEXT PRINCE group photo
-                    const THE NEXT PRINCEImg = new Image();
-                    THE NEXT PRINCEImg.crossOrigin = 'anonymous';
+                    const THENEXTPRINCEImg = new Image();
+                    THENEXTPRINCEImg.crossOrigin = 'anonymous';
                     
                     const drawMembersArea = () => {
                         // Create a subtle overlay background
@@ -628,10 +628,10 @@
                         ctx.globalAlpha = 1;
                         
                         // Try to draw the THE NEXT PRINCE group photo if available
-                        const THE NEXT PRINCEPhotoElement = document.getElementById('THE NEXT PRINCEGroupPhoto');
-                        if (THE NEXT PRINCEPhotoElement && THE NEXT PRINCEPhotoElement.complete && THE NEXT PRINCEPhotoElement.naturalHeight !== 0) {
+                        const THENEXTPRINCEPhotoElement = document.getElementById('THENEXTPRINCEGroupPhoto');
+                        if (THENEXTPRINCEPhotoElement && THENEXTPRINCEPhotoElement.complete && THENEXTPRINCEPhotoElement.naturalHeight !== 0) {
                             // Calculate dimensions to fit the photo properly
-                            const imgAspect = THE NEXT PRINCEPhotoElement.naturalWidth / THE NEXT PRINCEPhotoElement.naturalHeight;
+                            const imgAspect = THENEXTPRINCEPhotoElement.naturalWidth / THENEXTPRINCEPhotoElement.naturalHeight;
                             const areaAspect = stripWidth / membersAreaHeight;
                             
                             let drawWidth, drawHeight, drawX, drawY;
@@ -652,7 +652,7 @@
                             
                             // Add a subtle overlay to blend with the background
                             ctx.globalAlpha = 0.9;
-                            ctx.drawImage(THE NEXT PRINCEPhotoElement, drawX, drawY, drawWidth, drawHeight);
+                            ctx.drawImage(THENEXTPRINCEPhotoElement, drawX, drawY, drawWidth, drawHeight);
                             ctx.globalAlpha = 1;
                         }
                     };
@@ -729,11 +729,11 @@
                     
                     ctx.fillStyle = '#2c2c2c';
                     ctx.font = 'bold 16px "Montserrat", sans-serif';
-                    ctx.fillText('MEMORIES FROM THE CONCERT', stripWidth / 2, footerStartY + 10);
+                    ctx.fillText('MEMORIES FROM THE EVENT', stripWidth / 2, footerStartY + 10);
                     
                     ctx.fillStyle = '#4c4c4c';
                     ctx.font = 'bold 13px "Montserrat", sans-serif';
-                    ctx.fillText('THE NEXT PRINCE 1ST PHILIPPINE FANCON', stripWidth / 2, footerStartY + 30);
+                    ctx.fillText('THE NEXT PRINCE', stripWidth / 2, footerStartY + 30);
                     
                     ctx.fillStyle = '#6c6c6c';
                     ctx.font = 'bold 12px "Montserrat", sans-serif';
